@@ -1,0 +1,225 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "policyholder",
+						"type": "address"
+					}
+				],
+				"name": "PolicyActivated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "policyholder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "premium",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "coverage",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "expirationDate",
+						"type": "uint256"
+					}
+				],
+				"name": "PolicyCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "policyholder",
+						"type": "address"
+					}
+				],
+				"name": "PolicyDeactivated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "activatePolicy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_premium",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_coverage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_duration",
+						"type": "uint256"
+					}
+				],
+				"name": "createPolicy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "deactivatePolicy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_policyholder",
+						"type": "address"
+					}
+				],
+				"name": "getPolicyDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "policyholder",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "premium",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "coverage",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "expirationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "active",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct InsurancePolicy.Policy",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "policies",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "policyholder",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "premium",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "coverage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expirationDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/InsurancePolicy.sol": "InsurancePolicy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/InsurancePolicy.sol": {
+			"keccak256": "0x4be348c656185a30b6458d576060e9c6a6df62bcb9b78e80f18956f4857d58c7",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://f77df4f95ac70501cefeb40f089e184bd0cbd3cb720775fa23f629bcd4e60bbc",
+				"dweb:/ipfs/QmcZbdav2gSQcRuCvs7cbM3pPCAmjqwheQwvWARHoDsGRu"
+			]
+		}
+	},
+	"version": 1
+}
